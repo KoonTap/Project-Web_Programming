@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Sarabun', 'Georgia', serif;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar .logo {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #1a1a1a;
+  }
+
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+  }
+
+  .navbar .nav-links li a {
+    text-decoration: none;
+    color: #333333;
+    font-family: 'Georgia', serif;
+    font-size: 17px;
+    transition: color 0.2s ease;
+  }
+
+  .navbar .nav-links li a:hover {
+    color: #000000;
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .navbar .nav-links {
+      flex-wrap: wrap;
+      gap: 16px 24px;
+    }
+  }
+
+  /* ---------- Contact page ---------- */
+
+  :root {
+    --accent: #d6237a;
+    --accent-dark: #b81968;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --line-green: #06c755;
+  }
+
+  .contact-hero {
+    text-align: center;
+    padding: 56px 24px 40px;
+  }
+
+  .contact-hero h1 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+
+  .contact-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .contact-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 72px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .contact-main .kicker {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .contact-main .sub-en {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .contact-main .desc {
+    color: var(--ink-soft);
+    line-height: 1.9;
+    font-size: 15.5px;
+    margin-bottom: 32px;
+  }
+
+  .info-block {
+    margin-bottom: 28px;
+  }
+
+  .info-block h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .info-block .co-en {
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .info-block .addr {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .map-links {
+    display: flex;
+    gap: 24px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .map-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .map-links a.pin { color: #e63946; }
+  .map-links a.globe { color: #2f6fed; }
+  .map-links svg { width: 17px; height: 17px; }
+
+  .contact-side {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .contact-card h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .contact-card ul {
+    list-style: none;
+  }
+
+  .contact-card li {
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .contact-card li strong {
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .line-card {
+    background: #6b6f76;
+    border-radius: 6px;
+    padding: 24px 20px 28px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .line-card .line-label {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .line-card .line-id {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+
+  .qr-box {
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    width: 148px;
+    margin: 0 auto;
+  }
+
+  .qr-box svg,
+  .qr-box img { display: block; width: 128px; height: 128px; }
+
+  @media (max-width: 860px) {
+    .contact-wrap {
+      grid-template-columns: 1fr;
+      padding: 0 24px 56px;
+    }
+  }
+
+  /* ---------- Opening hours ---------- */
+
+  .hours-block {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .hours-block h3 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .hours-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  /* ---------- Contact form section ---------- */
+
+  .form-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 40px 72px;
+  }
+
+  .form-heading {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .form-heading .kicker {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .form-heading .sub-en {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 28px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .form-field-full {
+    grid-column: 1 / -1;
+  }
+
+  .form-field label {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .form-field input,
+  .form-field textarea {
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    color: var(--ink);
+    padding: 12px 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 6px;
+    background: #fafafa;
+    resize: vertical;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #fff;
+  }
+
+  .submit-btn {
+    grid-column: 1 / -1;
+    justify-self: start;
+    padding: 13px 36px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent);
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-size: 15.5px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .submit-btn:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 600px) {
+    .contact-form {
+      grid-template-columns: 1fr;
+    }
+
+    .form-field-full,
+    .submit-btn {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* ---------- Map section ---------- */
+
+  .map-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px 72px;
+  }
+
+  .map-heading {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .map-heading .kicker {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 4px;
+  }
+
+  .map-heading .sub-en {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .map-frame {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+
+  .map-frame iframe {
+    width: 100%;
+    height: 380px;
+    border: 0;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .map-section {
+      padding: 0 24px 56px;
+    }
+  }
+
+  /* ---------- Footer ---------- */
+
+  .site-footer {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    padding: 44px 40px 20px;
+  }
+
+  .footer-top {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 28px;
+    padding-bottom: 28px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: #bfbfbf;
+  }
+
+  .footer-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--accent);
+  }
+
+  .footer-contact p {
+    font-size: 14px;
+    color: #bfbfbf;
+    line-height: 1.8;
+  }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-top: 1px solid #3a3a3a;
+    padding-top: 16px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    color: #999999;
+  }
