@@ -1,0 +1,655 @@
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;              /* flexbox จุดที่ 1 จัดส่วนของโลโก้กับที่ลิ้งค์ไปหน้าอื่นๆคนละฝั่ง*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: rgb(228, 176, 185);  /* สีหลัก */
+}
+
+.navbar .logo a{
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;              /* flexbox จุดที่ 2 ทำให้เป็นแนวนอนไม่เป็นแนวตั้ง*/
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: "Edu VIC WA NT Hand", cursive;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar .nav-links a:hover {
+  color: rgb(13, 152, 199);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: grid;                     /* grid จุดที่ 1 แบ่งคอลัมน์ข้อความ/รูปภาพ */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 30px 40px;   /* เดิม 60px 40px */
+  background-color: #60dbc8;
+}
+
+.hero-text {
+  display: flex;                     /* flexbox เพิ่มเติม จัดข้อความในคอลัมน์ซ้ายให้เรียงแนวตั้ง */
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-title {
+  font-family: "Sriracha", cursive;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(6, 59, 123);
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-family: "Itim", cursive;
+  font-size: 20px;
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.btn-cta {
+  display: inline-block;
+  width: fit-content;
+  font-family: "Itim", cursive;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: rgb(13, 152, 199);
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: rgb(228, 176, 185);
+}
+
+.hero-image {
+  display: flex;                     /* จัดกึ่งกลางรูป */
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-image .logo-image {
+  max-width: 70%;   
+  height: auto;
+  border-radius: 100px;
+}
+
+/* ===== Features Section ===== */
+.features {
+  padding: 20px 40px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.features-title {
+  font-family: "Sriracha", cursive;
+  font-size: 32px;
+  color: rgb(73, 41, 216);
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;                          /* grid จุดที่ 2 จัดการ์ดเป็นแถว/คอลัมน์ */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  display: flex;                          /* flexbox เพิ่มเติม จัดไอคอน/หัวข้อ/คำอธิบายเรียงแนวตั้งกึ่งกลาง */
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 32px 30px;
+  background-color: rgb(228, 176, 185);
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-icon {
+  font-size: 40px;
+}
+
+.feature-heading {
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.feature-desc {
+  font-family: "Sriracha", cursive;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials {
+  padding: 40px;
+  background-color: #60dbc8;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-family: "Sriracha", cursive;
+  font-size: 28px;
+  color: rgb(6, 59, 123);
+  margin-bottom: 24px;
+}
+
+.testimonials-grid {
+  display: grid;                          /* grid จุดที่ 3 (เพิ่มเติม) จัดการ์ดรีวิวเป็นแถว/คอลัมน์ */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  display: flex;                          /* flexbox เพิ่มเติม จัดรูป/ข้อความ/ชื่อเรียงแนวตั้งกึ่งกลาง */
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;   
+  object-fit: cover;
+  border: 2px solid rgb(228, 176, 185);
+}
+
+.testimonial-text {
+  font-family: "Itim", cursive;
+  font-size: 13px;
+  color: #333333;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.testimonial-name {
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(13, 152, 199);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== CTA Section ===== */
+.cta {
+  display: flex;                     /* flexbox จัดข้อความ+ปุ่มเรียงกึ่งกลางแนวตั้ง */
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  padding: 30px 40px;
+  background-color: rgb(13, 152, 199);   
+}
+
+.cta-title {
+  font-family: "Sriracha", cursive;
+  font-size: 22px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.cta-text {
+  font-family: "Itim", cursive;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.btn-cta-alt {
+  display: inline-block;
+  font-family: "Itim", cursive;
+  font-size: 16px;
+  color: rgb(13, 152, 199);
+  background-color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-cta-alt:hover {
+  background-color: rgb(228, 176, 185);
+  color: #ffffff;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: rgb(228, 176, 185);
+  color: #ffffff;
+  padding: 48px 60px 24px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;                     /* flexbox: จัดข้อมูลร้านกับโซเชียลคนละฝั่ง */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  text-align: left;
+}
+
+.footer-logo {
+  font-family: "Sriracha", cursive;
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.footer-text {
+  font-family: "Itim", "Sriracha", cursive;
+  font-size: 15px;
+  color: #ffffff;
+  margin: 4px 0;
+}
+
+.footer-social {
+  display: flex;                     /* flexbox: เรียงปุ่มโซเชียลแนวนอน */
+  gap: 16px;
+}
+
+.footer-social .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  font-family: "Itim", "Sriracha", cursive;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-social .social-link:hover {
+  background-color: rgb(228, 176, 185);
+  color: rgb(13, 152, 199);
+}
+
+.footer-copyright {
+  font-family: "Itim", "Sriracha", cursive;
+  font-size: 13px;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 16px;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* ======================================================== Menu ============================================================ */
+
+/* ===== Page Header ===== */
+.page-header {
+  display: flex;              /* flexbox เพิ่มเติม: จัดหัวข้อ + คำอธิบายเรียงกึ่งกลางแนวตั้ง */
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 48px 40px;
+  background-color: #60dbc8;
+}
+
+.page-header-title {
+  font-family: "Sriracha", cursive;
+  font-size: 36px;
+  color: rgb(6, 59, 123);
+  margin: 0;
+}
+
+.page-header-subtitle {
+  font-family: "Itim", cursive;
+  font-size: 18px;
+  color: #333333;
+  margin: 0;
+}
+
+/* ===== Product Grid ===== */
+.product-section {
+  padding: 20px 40px 60px;
+  background-color: #ffffff;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.product-category {
+  margin-bottom: 48px;
+}
+
+.category-title {
+  font-family: "Sriracha", cursive;
+  font-size: 24px;
+  color: rgb(6, 59, 123);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgb(228, 176, 185);
+}
+
+.product-grid {
+  display: grid;                          /* grid: การ์ดสินค้าอย่างน้อย 3 คอลัมน์ */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== Product Card ===== */
+.product-card {
+  display: flex;                          /* flexbox: จัดกล่องรูป/เนื้อหาเรียงแนวตั้ง */
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;   /* hover เอฟเฟกต์ */
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.product-image-wrap {
+  display: flex;                          /* flexbox: จัดรูปสินค้ากึ่งกลางกรอบ */
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(228, 176, 185);
+  padding: 24px;
+}
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+}
+
+.product-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px;
+}
+
+.product-name {
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(6, 59, 123);
+  margin: 0;
+}
+
+.product-desc {
+  font-family: "Sriracha", cursive;
+  font-size: 13px;
+  color: #777777;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.product-divider {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 10px 0;
+}
+
+.product-footer {
+  display: flex;                          /* flexbox: จัดราคา/ปุ่มคนละฝั่ง */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-family: "Itim", cursive;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(13, 152, 199);
+  margin: 0;
+}
+
+.btn-detail {
+  font-family: "Itim", cursive;
+  font-size: 13px;
+  background-color: #60dbc8;
+  color: rgb(6, 59, 123);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;   /* hover เอฟเฟกต์ */
+}
+
+.btn-detail:hover {
+  background-color: rgb(13, 152, 199);
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Promotion Banner ===== */
+.promo-banner {
+  display: flex;              /* flexbox: จัดข้อความให้อยู่กึ่งกลาง */
+  justify-content: center;
+  align-items: center;
+  padding: 14px 20px;
+  background-color: rgb(13, 152, 199);
+  text-align: center;
+}
+
+.promo-text {
+  font-family: "Itim", cursive;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ================================================== Contact =========================================================== */
+
+/* ===== Contact Info + Form Section ===== */
+.contact-main {
+  display: flex;              /* flexbox: จัดฟอร์ม (ซ้าย) กับข้อมูลติดต่อ (ขวา) */
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.contact-info-card {
+  order: 2;                   /* บังคับให้อยู่ขวา */
+  flex: 1 1 460px;
+  max-width: 500px;
+  background-color: rgb(228, 176, 185);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.contact-form-card {
+  order: 1;                   /* บังคับให้อยู่ซ้าย */
+  flex: 1 1 460px;
+  max-width: 500px;
+  background-color: #60dbc8;
+  border-radius: 16px;
+  padding: 32px;
+}
+.contact-info-title {
+  font-family: "Sriracha", cursive;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.contact-info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;              /* flexbox: เรียงแต่ละรายการแนวตั้ง */
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info-item {
+  display: flex;              /* flexbox: จัดไอคอนกับข้อความคนละฝั่ง */
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contact-info-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.contact-info-label {
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 0 4px;
+}
+
+.contact-info-detail {
+  font-family: "Itim", cursive;
+  font-size: 14px;
+  color: rgb(6, 59, 123);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.contact-form-title {
+  font-family: "Sriracha", cursive;
+  font-size: 24px;
+  color: rgb(6, 59, 123);
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.contact-form {
+  display: grid;                          /* grid: จัดช่องชื่อ/อีเมลเป็น 2 คอลัมน์ */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;              /* flexbox: จัด label กับ input เรียงแนวตั้ง */
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group-full {
+  grid-column: 1 / -1;        /* ช่องหัวข้อและข้อความเต็มความกว้าง */
+}
+
+.form-label {
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-size: 15px;
+  color: rgb(6, 59, 123);
+}
+
+.form-input,.form-textarea {
+  font-family: "Itim", cursive;
+  font-size: 14px;
+  color: #333333;
+  background-color: #ffffff;
+  border: 2px solid rgb(228, 176, 185);
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: rgb(13, 152, 199);
+}
+
+.form-textarea {
+  resize: vertical;
+  font-family: "Itim", cursive;
+}
+
+.btn-submit {
+  grid-column: 1 / -1;
+  justify-self: center;
+  font-family: "Itim", cursive;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: rgb(13, 152, 199);
+  border: none;
+  padding: 14px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: rgb(228, 176, 185);
+}
+
+@media (max-width: 500px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+}
